@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALLOWEEN Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: #ff7518;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            color: #d1430b;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #262626;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+        }
+        .question {
+            background-color: #1a1a1a;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid #d15909f2;
+            transition: background-color 0.3s ease;
+        }
+        .question:hover {
+            background-color: #333;
+        }
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+            opacity: 0;
+            padding: 0 15px;
+            margin-top: 5px;
+            background-color: #333;
+            border-radius: 8px;
+            color: #f8b203;
+        }
+        .answer.open {
+            max-height: 100px;
+            opacity: 1;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HALLOWEEN</h1>
+
+    <div class="quiz-container">
+        <div class="question" onclick="toggleAnswer(0)">
+            1. Aký je pôvod Halloweenu?
+            <div class="answer">Halloween má pôvod v keltskom festivale Samhain, kde ľudia zapaľovali ohníky a nosili masky, aby odplašili duchov.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(1)">
+            2. Prečo sa vyrezávajú tekvice na Halloween?
+            <div class="answer">Vyrezávanie tekvíc má pôvod v írskej legende o Jackovi O'Lanternovi.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(2)">
+            3. Čo symbolizuje maskovanie počas Halloweenu?
+            <div class="answer">Maskovanie malo slúžiť na ochranu pred zlými duchmi, ktorí mohli počas Samhainu prechádzať svetom.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(3)">
+            4. Odkiaľ pochádza názov Halloween?
+            <div class="answer">Halloween pochádza z anglického výrazu „All Hallows' Eve“, čo znamená predvečer sviatku všetkých svätých.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(4)">
+            5. Prečo ľudia dávajú sladkosti na Halloween?
+            <div class="answer">Dávanie sladkostí má pôvod v zvyku „trick-or-treating“, kde deti žiadali sladkosti výmenou za sľub, že nevyvedú žartík.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(5)">
+            6. Aký je význam oranžovej farby počas Halloweenu?
+            <div class="answer">Oranžová symbolizuje úrodu a jesenné listy, čo sú symboly hojnosti.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(6)">
+            7. Prečo sa Halloween oslavuje 31. októbra?
+            <div class="answer">31. október bol dátumom keltského sviatku Samhain, ktorý znamenal koniec leta a začiatok temnejšieho obdobia.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(7)">
+            8. Čo symbolizuje čierna farba počas Halloweenu?
+            <div class="answer">Čierna farba symbolizuje smrť a temnotu, pretože Halloween sa viaže na mŕtvych a duchov.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(8)">
+            9. Aký je pôvod „trick-or-treat“ tradície?
+            <div class="answer">„Trick-or-treat“ pochádza zo stredovekých zvykov, keď chudobní žiadali jedlo výmenou za modlitby za mŕtvych.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(9)">
+            10. Prečo sa používajú strašidelné dekorácie na Halloween?
+            <div class="answer">Strašidelné dekorácie slúžia na vytváranie atmosféry strachu a majú pripomínať duchov a mŕtvych.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(10)">
+            11. Aký je pôvod halloweenskych kostýmov?
+            <div class="answer">Kostýmy pochádzajú z keltskej tradície maskovať sa, aby zlých duchov zmiatli a aby si mysleli, že ľudia sú tiež duchovia.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(11)">
+            12. Ako sa slávi Halloween v rôznych krajinách?
+            <div class="answer">V USA je populárne trick-or-treat, v Mexiku sa slávi Deň mŕtvych, zatiaľ čo v Írsku sa oslavuje tradičnými ohňami a hrami.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(12)">
+            13. Kde sa Halloween oslavuje najviac?
+            <div class="answer">Halloween je najpopulárnejší v Spojených štátoch, Kanade, Írsku a Veľkej Británii.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(13)">
+            14. Aké zvyky na Halloween sa líšia medzi krajinami?
+            <div class="answer">V Škótsku deti namiesto sladkostí tradične dostávali ovocie a orechy, zatiaľ čo v Mexiku sa dekorujú hroby predkov.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(14)">
+            15. Prečo sa pália ohniská počas Halloweenu?
+            <div class="answer">Ohniská sa pálili, aby ľudia ochránili svoje domovy pred duchmi a démonmi počas Samhainu.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(15)">
+            16. Aké sú najpopulárnejšie halloweenske filmy?
+            <div class="answer">Medzi najpopulárnejšie filmy patria „Hocus Pocus“, „Halloween“ a „The Nightmare Before Christmas“.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(16)">
+            17. Kedy vznikol Halloween v Spojených štátoch?
+            <div class="answer">Halloween sa do USA dostal v 19. storočí s príchodom írskych a škótskych prisťahovalcov.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(17)">
+            18. Ako sa zmenila oslava Halloweenu v priebehu rokov?
+            <div class="answer">Halloween sa zmenil z duchovného sviatku na komerčnú zábavu plnú kostýmov, párty a filmov.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(18)">
+            19. Aké sú najpopulárnejšie halloweenske postavy?
+            <div class="answer">Medzi najznámejšie patria upíri, čarodejnice, duchovia, zombie a vlkolaci.</div>
+        </div>
+
+        <div class="question" onclick="toggleAnswer(19)">
+            20. Prečo sú kostýmy čarodejníc tak populárne?
+            <div class="answer">Čarodejnice sa spájajú s tajomnými silami, kúzlami a mágiou, čo ich robí obľúbenými postavami počas Halloweenu.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(index) {
+            const answers = document.querySelectorAll('.answer');
+            answers[index].classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
